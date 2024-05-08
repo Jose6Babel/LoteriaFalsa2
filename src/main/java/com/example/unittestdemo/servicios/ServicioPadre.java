@@ -4,6 +4,8 @@ import com.example.unittestdemo.ObjetoDatos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ServicioPadre implements IServicioPadre{
 
@@ -11,7 +13,7 @@ public class ServicioPadre implements IServicioPadre{
 	IServicioPassword servicioPassword;
 
 	@Override
-	public ObjetoDatos metodoPadre(String password) {
+	public ObjetoDatos metodoPadre(List<Integer> lista) {
 		Integer nivel = servicioPassword.testPsswd(password);
 		return new ObjetoDatos(nivel, password);
 	}

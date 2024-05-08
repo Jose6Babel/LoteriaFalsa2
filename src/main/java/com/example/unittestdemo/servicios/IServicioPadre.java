@@ -2,7 +2,10 @@ package com.example.unittestdemo.servicios;
 
 import com.example.unittestdemo.ObjetoDatos;
 
+import java.util.List;
+
 public interface IServicioPadre {
 
-	public ObjetoDatos metodoPadre(String valor);
+	ObjetoDatos metodoPadre(List<Integer> lista);
+
 }
