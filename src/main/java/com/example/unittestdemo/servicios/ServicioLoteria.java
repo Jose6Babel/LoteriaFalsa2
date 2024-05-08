@@ -12,10 +12,14 @@ public class ServicioLoteria implements IServicioLoteria {
     @Autowired
     IServicioBombo servicioBombo;
 
-    private List<Bombo> bombosGanadores;
+    private List<String> numerosGanadores;
 
 
-    public void introducirGanador(Integer numGanador){
+    public void introducirGanador(String numGanador){
+        String[] splitNumerosGanadores = numGanador.split("");
+        for (int x = 0; x < splitNumerosGanadores.length; x++) {
+            numerosGanadores.add(splitNumerosGanadores[x]);
+        }
         // servicioBombo.introducirGanador por cada unos de los numeros/bombos
     }
 

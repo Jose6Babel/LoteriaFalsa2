@@ -1,26 +1,25 @@
 package com.example.unittestdemo.entidades;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class Bombo {
-    private List<Integer> numerosGenerados;
-    private double porcentaje;
+    private Map<Integer, Double> numerosGenerados;
 
-    public Bombo(List<Integer> testBombo) {
-        numerosGenerados.addAll(testBombo);
+    public Bombo() {
+        numerosGenerados = new HashMap<>();
+        numerosGenerados.put(0, 10.0);
+        numerosGenerados.put(1, 10.0);
+        numerosGenerados.put(2, 10.0);
+        numerosGenerados.put(3, 10.0);
+        numerosGenerados.put(4, 10.0);
+        numerosGenerados.put(5, 10.0);
+        numerosGenerados.put(6, 10.0);
+        numerosGenerados.put(7, 10.0);
+        numerosGenerados.put(8, 10.0);
+        numerosGenerados.put(9, 10.0);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bombo bombo = (Bombo) o;
-        return Objects.equals(numerosGenerados, bombo.numerosGenerados);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(numerosGenerados);
-    }
 }
