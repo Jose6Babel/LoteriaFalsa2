@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface IServicioLoteria {
 
-    boolean testCorrectoNumeroAndSize(List<Integer> listaBombo);
+    void introducirGanador(String numGanador);
+
+    List<String> obtenerListadoGanadores(int numMostrarGanadores);
+
 }

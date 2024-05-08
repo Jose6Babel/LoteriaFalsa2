@@ -1,9 +1,8 @@
 package com.example.unittestdemo.entidades;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
+import java.util.Random;
 
 public class Bombo {
     private Map<Integer, Double> numerosGenerados;
@@ -22,4 +21,11 @@ public class Bombo {
         numerosGenerados.put(9, 10.0);
     }
 
+    public Map<Integer, Double> getNumerosGenerados() {
+        return numerosGenerados;
+    }
+
+    public void setNumerosGenerados(Map<Integer, Double> numerosGenerados) {
+        this.numerosGenerados = numerosGenerados;
+    }
 }
